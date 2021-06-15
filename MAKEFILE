@@ -1,0 +1,10 @@
+all : fixfat.exe
+
+
+.c.obj:
+   cl -c -W3 -AS -nologo $*.c 
+
+fixfat.obj : fixfat.c
+
+fixfat.exe : fixfat.obj
+   link $*,,NULL,slibcer/NOD/NOE/CO/LI;
